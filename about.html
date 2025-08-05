@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Cody Chukwuebuka is a tech content creator and developer. Explore his work, tools, and projects.">
+  <meta name="keywords" content="Cody Chukwuebuka, tech creator, developer, iPhone tips, coding, content creator, web developer, AR project">
+  <meta name="author" content="Cody Chukwuebuka">
+  <meta property="og:title" content="Cody Chukwuebuka – Tech Creator & Developer">
+  <meta property="og:description" content="Explore Cody’s content, tools, and projects.">
+  <meta property="og:image" content="https://codychukwuebuka.com/assets/images/Subject%208.png">
+  <meta property="og:url" content="https://codychukwuebuka.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cody Chukwuebuka – Tech Creator & Developer">
+  <meta name="twitter:description" content="Explore Cody’s content, tools, and projects.">
+  <meta name="twitter:image" content="https://codychukwuebuka.com/assets/images/Subject%208.png">
   <link rel="icon" type="image/png" href="assets/icons/logo.png" />
   <title>About Cody Chukwuebuka</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav.css" />
   <style>
-
-    footer {
+        footer {
       background: #f8f8f8;
-      padding: 40px 20px 30px 20px;
+      padding: 100px 20px 30px 20px;
       border-top: 1px solid #ddd;
       text-align: center;
       font-size: 14px;
@@ -148,9 +160,9 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
+</main>
 
-  <footer>
+<footer>
     <div class="footer-top">
       <div class="footer-logo">
         <img src="assets/images/Subject 4.png" alt="Profile Logo" />
@@ -160,10 +172,10 @@
         </div>
       </div>
       <div class="social-icons" aria-label="Social Media Links">
-        <a href="javascript:void(0)" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/codytech03?s=21" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.724-.951.564-2.005.974-3.127 1.195-.897-.959-2.178-1.559-3.594-1.559-2.723 0-4.928 2.206-4.928 4.928 0 .39.045.765.127 1.124-4.094-.205-7.725-2.165-10.159-5.144-.424.729-.666 1.574-.666 2.476 0 1.708.869 3.216 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.317 0-.626-.031-.927-.089.627 1.956 2.444 3.379 4.6 3.419-1.68 1.318-3.809 2.105-6.102 2.105-.396 0-.787-.023-1.174-.069 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14.002-7.496 14.002-13.986 0-.21 0-.423-.015-.633.962-.695 1.8-1.562 2.46-2.549z"/></svg>
         </a>
-        <a href="javascript:void(0)" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/codytech03?s=21" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11.75 20h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.25 12.268h-3v-5.604c0-1.337-.026-3.06-1.865-3.06-1.867 0-2.153 1.459-2.153 2.965v5.699h-3v-11h2.882v1.5h.041c.402-.76 1.381-1.56 2.844-1.56 3.041 0 3.604 2.001 3.604 4.6v6.46z"/></svg>
         </a>
         <a href="javascript:void(0)" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
@@ -188,29 +200,19 @@
       <a href="javascript:void(0)">Terms of Service</a>
     </div>
   </footer>
+
   <script>
-    function toggleMenu() {
-      const slideMenu = document.getElementById("slideMenu");
-      const menuIcon = document.querySelector(".menu-icon");
-      slideMenu.classList.toggle("active");
-      menuIcon.classList.toggle("active");
-    }
-    document.querySelector('.logo-container').addEventListener('click', function (e) {
-      e.preventDefault();
-      window.location.href = 'index.html';
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
     });
-    document.querySelector('.menu-icon').addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleMenu();
-      }
-    });
-    document.addEventListener('click', function(event) {
-      const menu = document.getElementById('slideMenu');
-      const menuIcon = document.querySelector('.menu-icon');
-      if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
-        menu.classList.remove('active');
-        menuIcon.classList.remove('active');
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function(event) {
+      if (!mobileMenu.contains(event.target) && !toggleBtn.contains(event.target)) {
+        mobileMenu.classList.remove("active");
       }
     });
   </script>
