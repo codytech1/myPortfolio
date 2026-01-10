@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Journal — Cody Chukwuebuka</title>
+
+  <link rel="stylesheet" href="gallery.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="visual-journal">
+
+  <!-- BACK -->
+  <a href="index.html" class="back-home" aria-label="Back to homepage">←</a>
+
+  <!-- HEADER -->
+  <header class="journal-header">
+    <h1>Visual Journal</h1>
+    <p>
+      A visual collection of moments, events, behind-the-scenes,
+      and ideas — closely synced with my Pinterest boards.
+    </p>
+
+    <div class="journal-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="personal">Personal</button>
+      <button class="filter-btn" data-filter="bts">BTS</button>
+
+      <a
+        href="https://www.pinterest.com/codychukwuebuka"
+        target="_blank"
+        class="filter-btn pinterest"
+      >
+        Pinterest Boards →
+      </a>
+    </div>
+  </header>
+
+  <!-- GRID -->
+  <div class="journal-grid">
+
+    <div class="journal-grid" id="journalGrid">
+      <!-- Pinterest items will be injected here -->
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="journal-cta">
+    <a href="https://www.pinterest.com/codychukwuebuka" target="_blank">
+      Watch More on Pinterest →
+    </a>
+  </div>
+
+</section>
+
+<script src="gallery.js"></script>
+</body>
+</html>

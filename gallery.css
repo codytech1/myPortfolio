@@ -1,0 +1,179 @@
+:root {
+  --bg: #f7f9fc;
+  --card-bg: #ffffff;
+  --accent: #111;
+  --muted: #666;
+  --soft: #eef1f6;
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--accent);
+}
+
+/* SECTION */
+.visual-journal {
+  padding: 60px 40px 120px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* BACK ARROW */
+.back-home {
+  display: inline-block;
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.back-home:hover {
+  transform: translateX(-6px);
+  opacity: .7;
+}
+
+/* HEADER */
+.journal-header {
+  max-width: 900px;
+  margin-bottom: 60px;
+}
+
+.journal-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  margin-bottom: 14px;
+}
+
+.journal-header p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+/* FILTERS */
+.journal-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: var(--soft);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #111;
+  color: #fff;
+}
+
+.filter-btn.pinterest {
+  background: #e60023;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* GRID (Pinterest-style masonry) */
+.journal-grid {
+  columns: 4 280px;
+  column-gap: 28px;
+}
+
+.journal-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 28px;
+  break-inside: avoid;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.journal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.journal-card img {
+  width: 100%;
+  display: block;
+}
+
+/* META */
+.card-meta {
+  padding: 20px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: #111;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.journal-card.pinterest .tag {
+  background: #e60023;
+}
+
+.card-meta h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-meta a {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.card-meta a:hover {
+  text-decoration: underline;
+}
+
+/* CTA */
+.journal-cta {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.journal-cta a {
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .visual-journal {
+    padding: 80px 20px;
+  }
+
+  .journal-header h1 {
+    font-size: 42px;
+  }
+
+  .journal-grid {
+    columns: 2 160px;
+  }
+}
