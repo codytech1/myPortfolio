@@ -1,1 +1,57 @@
+name: Sync Pinterest RSS
 
+on:
+  schedule:
+    - cron: "0 6 * * *"   # runs daily
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch Pinterest RSS
+        run: |
+          curl -L "https://www.pinterest.com/codychukwuebuka/my-visual-journal-cody-chukwuebuka.rss" -o feed.xml
+
+      - name: Convert RSS to JSON
+        run: |
+          node <<'EOF'
+          const fs = require("fs");
+          const xml = fs.readFileSync("feed.xml", "utf8");
+
+          const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)]
+            .slice(0, 8)
+            .map(item => {
+              const block = item[1];
+
+              const title = (block.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) || [])[1];
+              const link = (block.match(/<link>(.*?)<\/link>/) || [])[1];
+              const img = (block.match(/<img src="(.*?)"/) || [])[1];
+
+              if (!img || !link) return null;
+
+              return {
+                title: title || "Pinterest Pin",
+                image: img,
+                url: link
+              };
+            })
+            .filter(Boolean);
+
+          fs.writeFileSync(
+            "data/pinterest.json",
+            JSON.stringify({ items }, null, 2)
+          );
+          EOF
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/pinterest.json
+          git commit -m "Auto-sync Pinterest board" || echo "No changes"
+          git push
