@@ -40,13 +40,21 @@
   </header>
 
   <!-- GRID -->
-  <div class="journal-grid">
-
     <div class="journal-grid" id="journalGrid">
-      <!-- Pinterest items will be injected here -->
-    </div>
 
-  </div>
+      <!-- Loading skeletons -->
+      <article class="journal-card skeleton"></article>
+      <article class="journal-card skeleton"></article>
+      <article class="journal-card skeleton"></article>
+      <article class="journal-card skeleton"></article>
+
+      <!-- Empty state (already added in step 1) -->
+      <div class="journal-empty" id="journalEmpty" style="display:none">
+        <p>No journal entries yet.</p>
+        <p>New moments will appear here as I post on Pinterest.</p>
+      </div>
+
+    </div>
 
   <!-- CTA -->
   <div class="journal-cta">
