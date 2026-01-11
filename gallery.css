@@ -21,7 +21,7 @@ body {
 
 /* SECTION */
 .visual-journal {
-  padding: 60px 40px 120px;
+  padding: 40px 40px 120px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -272,7 +272,7 @@ body {
       #ffffff,
       #f7f9fc
     );
-  padding: 120px 40px 100px;
+  padding: 50px 40px 50px;
   margin-bottom: 40px;
 }
 
