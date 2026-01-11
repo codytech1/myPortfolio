@@ -12,74 +12,51 @@
 
 <section class="visual-journal">
 
-  <!-- BACK ARROW -->
+  <!-- BACK -->
   <a href="index.html" class="back-home" aria-label="Back to homepage">←</a>
 
   <!-- HEADER -->
-<!-- HERO HEADER -->
-<header class="journal-header hero">
-
-  <div class="hero-content">
+  <header class="journal-header">
     <h1>Visual Journal</h1>
     <p>
       A visual collection of moments, events, behind-the-scenes,
       and ideas — closely synced with my Pinterest boards.
     </p>
 
-    <!-- FILTERS (visual only) -->
     <div class="journal-filters">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">Events</button>
-      <button class="filter-btn">Personal</button>
-      <button class="filter-btn">BTS</button>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="personal">Personal</button>
+      <button class="filter-btn" data-filter="bts">BTS</button>
 
       <a
-        href="https://www.pinterest.com/codychukwuebuka/my-visual-journal-cody-chukwuebuka/"
+        href="https://www.pinterest.com/codychukwuebuka"
         target="_blank"
         class="filter-btn pinterest"
       >
         Pinterest Boards →
       </a>
     </div>
-  </div>
+  </header>
 
-</header>
+  <!-- GRID -->
+  <div class="journal-grid">
 
-  <!-- 🔥 VISUAL FEED SECTION -->
-  <section class="visual-feed">
-
-    <h2 class="feed-title">Latest from My Visual Journal</h2>
-    <p class="feed-subtitle">
-      Curated moments, ideas, and creative snapshots — updated directly from Pinterest.
-    </p>
-
-    <!-- PINTEREST EMBED -->
-    <div class="pinterest-wrapper fade-in">
-      <a
-        data-pin-do="embedBoard"
-        data-pin-board-width="900"
-        data-pin-scale-height="800"
-        data-pin-scale-width="80"
-        href="https://www.pinterest.com/codychukwuebuka/my-visual-journal-cody-chukwuebuka/">
-      </a>
+    <div class="journal-grid" id="journalGrid">
+      <!-- Pinterest items will be injected here -->
     </div>
 
-  </section>
+  </div>
 
   <!-- CTA -->
   <div class="journal-cta">
-    <a
-      href="https://www.pinterest.com/codychukwuebuka/my-visual-journal-cody-chukwuebuka/"
-      target="_blank"
-    >
+    <a href="https://www.pinterest.com/codychukwuebuka" target="_blank">
       Watch More on Pinterest →
     </a>
   </div>
 
 </section>
 
-<!-- REQUIRED PINTEREST SCRIPT -->
-<script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
-
+<script src="gallery.js"></script>
 </body>
 </html>
