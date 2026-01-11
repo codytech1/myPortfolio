@@ -2,7 +2,7 @@ name: Sync Pinterest RSS
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # runs daily
+    - cron: "0 6 * * *"   # daily at 6am UTC
   workflow_dispatch:
 
 jobs:
@@ -13,9 +13,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Fetch Pinterest RSS
+      - name: Fetch Pinterest Board RSS
         run: |
-          curl -L "https://www.pinterest.com/codychukwuebuka/my-visual-journal-cody-chukwuebuka.rss" -o feed.xml
+          curl -L "https://www.pinterest.com/codychukwuebuka/my-visual-journal-cody-chukwuebuka/feed.rss" -o feed.xml
 
       - name: Convert RSS to JSON
         run: |
@@ -25,33 +25,37 @@ jobs:
 
           const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)]
             .slice(0, 8)
-            .map(item => {
-              const block = item[1];
+            .map(match => {
+              const block = match[1];
 
-              const title = (block.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) || [])[1];
+              const title =
+                (block.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) ||
+                 block.match(/<title>(.*?)<\/title>/) ||
+                 [])[1];
+
               const link = (block.match(/<link>(.*?)<\/link>/) || [])[1];
-              const img = (block.match(/<img src="(.*?)"/) || [])[1];
+              const img = (block.match(/<img src="(https:\/\/i\.pinimg\.com\/[^"]+)"/) || [])[1];
 
               if (!img || !link) return null;
 
               return {
                 title: title || "Pinterest Pin",
                 image: img,
-                url: link
+                link
               };
             })
             .filter(Boolean);
 
           fs.writeFileSync(
-            "data/pinterest.json",
-            JSON.stringify({ items }, null, 2)
+            "pinterest.json",
+            JSON.stringify(items, null, 2)
           );
           EOF
 
-      - name: Commit updated data
+      - name: Commit updated Pinterest data
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/pinterest.json
+          git add pinterest.json
           git commit -m "Auto-sync Pinterest board" || echo "No changes"
-          git push origin main --no-verify
+          git push origin main
