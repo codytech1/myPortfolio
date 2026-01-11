@@ -255,3 +255,56 @@ body {
     font-size: 15px;
   }
 }
+
+/* =========================
+   CINEMATIC HERO HEADER
+========================= */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 0, 0, 0.04),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      #f7f9fc
+    );
+  padding: 120px 40px 100px;
+  margin-bottom: 40px;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 72px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 19px;
+  color: #555;
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 80px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
