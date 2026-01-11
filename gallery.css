@@ -308,3 +308,68 @@ body {
     font-size: 16px;
   }
 }
+
+/* =========================
+   TYPOGRAPHY SYSTEM
+========================= */
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Paragraphs */
+p {
+  line-height: 1.7;
+}
+
+/* =========================
+   SPACING & LAYOUT REFINEMENT
+========================= */
+
+.visual-journal {
+  padding-bottom: 140px;
+}
+
+/* Back arrow spacing */
+.back-home {
+  margin-bottom: 60px;
+  font-size: 34px;
+}
+
+/* Filters spacing */
+.journal-filters {
+  gap: 14px;
+}
+
+/* Filter buttons */
+.filter-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.filter-btn {
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Pinterest CTA spacing */
+.journal-cta {
+  margin-top: 120px;
+}
+
+.journal-cta a {
+  padding: 18px 34px;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
