@@ -177,3 +177,24 @@ body {
     columns: 2 160px;
   }
 }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.pin-card {
+  text-decoration: none;
+  color: black;
+}
+
+.pin-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.pin-title {
+  margin-top: 8px;
+  font-weight: 500;
+}
