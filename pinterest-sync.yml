@@ -1,61 +1,39 @@
-name: Sync Pinterest RSS
+const fs = require("fs");
 
-on:
-  schedule:
-    - cron: "0 6 * * *"
-  workflow_dispatch:
+const xml = fs.readFileSync("feed.xml", "utf8");
 
-jobs:
-  sync:
-    runs-on: ubuntu-latest
+const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)]
+  .slice(0, 8)
+  .map(match => {
+    const block = match[1];
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+    const title =
+      (block.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) ||
+       block.match(/<title>(.*?)<\/title>/) ||
+       [])[1];
 
-      - name: Fetch Pinterest RSS
-        run: |
-          curl -L "https://www.pinterest.com/codychukwuebuka/my-visual-journal-cody-chukwuebuka/feed.rss" -o feed.xml
+    const link = (block.match(/<link>(.*?)<\/link>/) || [])[1];
 
-      - name: Convert RSS to JSON
-        run: |
-          node <<'EOF'
-          const fs = require("fs");
+    const description =
+      (block.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/) ||
+       [])[1];
 
-          const xml = fs.readFileSync("feed.xml", "utf8");
+    if (!description) return null;
 
-          const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)]
-            .slice(0, 8)
-            .map(item => {
-              const block = item[1];
+    const img =
+      (description.match(/<img.*?src="(.*?)"/) || [])[1];
 
-              const title =
-                (block.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) ||
-                 block.match(/<title>(.*?)<\/title>/) || [])[1];
+    if (!img || !link) return null;
 
-              const link = (block.match(/<link>(.*?)<\/link>/) || [])[1];
-              const img = (block.match(/<img src="(.*?)"/) || [])[1];
+    return {
+      title: title || "Pinterest Pin",
+      image: img,
+      url: link
+    };
+  })
+  .filter(Boolean);
 
-              if (!img || !link) return null;
-
-              return {
-                title: title || "Pinterest Pin",
-                image: img,
-                url: link
-              };
-            })
-            .filter(Boolean);
-
-          fs.writeFileSync(
-            "pinterest.json",
-            JSON.stringify(items, null, 2)
-          );
-          EOF
-
-      - name: Commit updated data
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add pinterest.json
-          git commit -m "Auto-sync Pinterest board" || echo "No changes"
-          git push origin main
+fs.writeFileSync(
+  "pinterest.json",
+  JSON.stringify(items, null, 2)
+);
