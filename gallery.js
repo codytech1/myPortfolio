@@ -1,60 +1,49 @@
-const grid = document.getElementById("journalGrid");
-const filterButtons = document.querySelectorAll(".filter-btn");
+const gallery = document.getElementById("gallery");
 
-let allItems = [];
+const BOARD_URL =
+  "https://www.pinterest.com/codychukwuebuka/my-visual-journal-cody-chukwuebuka/";
 
-// Fetch Pinterest JSON
-fetch("pinterest.json")
-  .then(res => res.json())
-  .then(data => {
-    allItems = data;
-    renderItems("all");
-  })
-  .catch(err => {
-    console.error("Pinterest sync failed:", err);
-  });
+const PINTEREST_FEED =
+  `https://www.pinterest.com/resource/BoardFeedResource/get/?data=${encodeURIComponent(JSON.stringify({
+    options: {
+      board_url: BOARD_URL,
+      page_size: 12
+    },
+    context: {}
+  }))}`;
 
-// Render items
-function renderItems(filter) {
-  grid.innerHTML = "";
+async function loadPinterest() {
+  try {
+    const res = await fetch(PINTEREST_FEED, {
+      headers: {
+        "X-Requested-With": "XMLHttpRequest"
+      }
+    });
 
-  const filtered =
-    filter === "all"
-      ? allItems
-      : allItems.filter(item => item.category === filter);
+    const data = await res.json();
+    const pins = data.resource_response.data;
 
-  filtered.forEach(item => {
-    const card = document.createElement("article");
-    card.className = `journal-card ${item.category}`;
+    gallery.innerHTML = "";
 
-    card.innerHTML = `
-      <img src="${item.image}" alt="${item.title}">
-      <div class="card-meta">
-        <span class="tag">${item.category.toUpperCase()}</span>
-        <h3>${item.title}</h3>
-        <a href="${item.link}" target="_blank">View on Pinterest →</a>
-      </div>
-    `;
+    pins.forEach(pin => {
+      const img = pin.images?.orig?.url;
+      const link = `https://www.pinterest.com/pin/${pin.id}/`;
+      const title = pin.title || "Pinterest Pin";
 
-    grid.appendChild(card);
-  });
+      if (!img) return;
+
+      gallery.innerHTML += `
+        <a class="pin-card" href="${link}" target="_blank">
+          <img src="${img}" alt="${title}">
+          <div class="pin-title">${title}</div>
+        </a>
+      `;
+    });
+
+  } catch (err) {
+    gallery.innerHTML = "<p>Failed to load Pinterest pins.</p>";
+    console.error(err);
+  }
 }
 
-// Filter buttons
-filterButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const filter = btn.dataset.filter;
-
-    filterButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    renderItems(filter);
-  });
-});
-
-// Escape key → back home
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") {
-    window.location.href = "index.html";
-  }
-});
+loadPinterest();
