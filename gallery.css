@@ -373,3 +373,47 @@ p {
   font-size: 15px;
   letter-spacing: 0.3px;
 }
+
+/* =========================
+   MICRO-INTERACTIONS
+========================= */
+
+/* Back arrow hover */
+.back-home {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.back-home:hover {
+  transform: translateX(-6px);
+  opacity: 0.75;
+}
+
+/* Filter buttons */
+.filter-btn {
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* CTA button hover */
+.journal-cta a {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.journal-cta a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
