@@ -1,21 +1,37 @@
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
+const toggleBtn = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const backdrop = document.querySelector(".menu-backdrop");
 
-    toggleBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-      document.body.classList.toggle('menu-open');
-      // keep aria-hidden synced
-      mobileMenu.setAttribute('aria-hidden', mobileMenu.classList.contains('active') ? 'false' : 'true');
-    });
+function closeMenu() {
+  mobileMenu.classList.remove("active");
+  toggleBtn.classList.remove("active");
+  backdrop.classList.remove("active");
+  toggleBtn.setAttribute("aria-expanded", "false");
+  document.body.style.overflow = "";
+}
 
-    document.addEventListener('click', function (event) {
-      const isClickInside = mobileMenu.contains(event.target) || toggleBtn.contains(event.target);
-      if (!isClickInside && mobileMenu.classList.contains('active')) {
-        mobileMenu.classList.remove('active');
-        document.body.classList.remove('menu-open');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-      }
-    });
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  const isOpen = mobileMenu.classList.toggle("active");
+  toggleBtn.classList.toggle("active");
+  backdrop.classList.toggle("active");
+
+  toggleBtn.setAttribute("aria-expanded", isOpen);
+  document.body.style.overflow = isOpen ? "hidden" : "";
+});
+
+backdrop.addEventListener("click", closeMenu);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
+});
+
+document.addEventListener("click", (e) => {
+  if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+    closeMenu();
+  }
+});
 
     document.addEventListener('DOMContentLoaded', () => {
       const videos = document.querySelectorAll('.auto-video');
@@ -67,3 +83,20 @@
 
   container.addEventListener("scroll", updateButtons);
   window.addEventListener("load", updateButtons);
+
+
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+});
