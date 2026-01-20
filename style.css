@@ -56,6 +56,7 @@ a:hover { text-decoration: underline; }
   justify-content: space-between;
   align-items: center;
   background-color: white;
+   padding: 0 20px;
   
   position: fixed; /* or fixed if you’re using sticky nav */
   z-index: 1000;
