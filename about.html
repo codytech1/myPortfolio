@@ -1,210 +1,878 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Primary Meta Tags -->
   <title>About Cody Chukwuebuka | Tech / Educative Creator & Developer</title>
-  <meta name="title" content="About Cody Chukwuebuka | Tech / Educative Creator & Developer">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Learn more about Cody Chukwuebuka — a Nigerian tech & educative content creator and developer.">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://codychukwuebuka.com/about.html">
-  <meta property="og:title" content="About Cody Chukwuebuka | Tech Creator & Developer">
+  <!-- SEO -->
+  <link rel="canonical" href="https://codychukwuebuka.com/about.html" />
+  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About Cody Chukwuebuka">
   <meta property="og:description" content="Learn more about Cody Chukwuebuka — a Nigerian tech & educative content creator and developer.">
-  <meta property="og:image" content="https://codychukwuebuka.com/assets/images/new-homepage-photo.png">
+  <meta property="og:url" content="https://codychukwuebuka.com/about.html">
+  <meta property="og:image" content="https://codychukwuebuka.com/assets/images/Subject%208.png">
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://codychukwuebuka.com/about.html">
-  <meta property="twitter:title" content="About Cody Chukwuebuka | Tech Creator / Educator & Developer">
-  <meta property="twitter:description" content="Learn more about Cody Chukwuebuka — a Nigerian tech & educative content creator and developer.">
-  <meta property="twitter:image" content="https://codychukwuebuka.com/assets/images/new-homepage-photo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Cody Chukwuebuka">
+  <meta name="twitter:description" content="Learn more about Cody Chukwuebuka — a Nigerian tech & educative content creator and developer.">
+  <meta name="twitter:image" content="https://codychukwuebuka.com/assets/images/Subject%208.png">
 
-  <!-- Structured Data -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="about.css" />
+
+  <!-- Person Schema (Knowledge Panel Anchor) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Cody Chukwuebuka",
-    "alternateName": ["Chukwuebuka Victor", "Chukwuebuka Victor Enweani"],
-    "url": "https://codychukwuebuka.com/about.html",
-    "image": "https://codychukwuebuka.com/assets/images/new-homepage-photo.png",
+    "alternateName": [
+      "Chukwuebuka Victor",
+      "Chukwuebuka Victor Enweani"
+    ],
+    "url": "https://codychukwuebuka.com",
+    "image": "https://codychukwuebuka.com/assets/images/Subject%208.png",
+    "jobTitle": "Tech Educator & Digital Creator",
+    "description": "Nigerian tech & educative content creator and developer.",
     "sameAs": [
       "https://x.com/codychukwuebuka?s=21",
-      "https://youtube.com/@codychukwuebuka?si=D1xyBfhK262rqGZ9",
-      "https://www.instagram.com/codychukwuebuka?igsh=emtsczFibHg2cXRm&utm_source=qr",
-      "https://www.linkedin.com/in/cody-chukwuebuka-0034b82b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      "https://www.tiktok.com/@codychukwuebuka?_r=1&_t=ZN-91W6ZlVeLPa"
-    ],
-    "jobTitle": "Tech / Educative Creator & Developer",
-    "description": "I'm a 20-year-old Nigerian tech & educative content creator and developer."
+      "https://www.instagram.com/codychukwuebuka",
+      "https://www.linkedin.com/in/cody-chukwuebuka-0034b82b9",
+      "https://www.tiktok.com/@codychukwuebuka",
+      "https://youtube.com/@codychukwuebuka"
+    ]
   }
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="canonical" href="https://codychukwuebuka.com/about.html" />
-  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="nav.css" />
+  <!-- Breadcrumb Schema (About Page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://codychukwuebuka.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://codychukwuebuka.com/about.html"
+      }
+    ]
+  }
+  </script>
+
   <style>
-        footer {
-      background: #f8f8f8;
-      padding: 100px 20px 30px 20px;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-      user-select: none;
+
+
+        /* =========================
+      ABOUT PAGE STYLES
+    ========================= */
+
+    .about-hero {
+      background: #fbf7f3;
+      padding: 20px 100px 40px;
+      border-radius: 40px;
+      max-width: 1400px;
+      margin: 20px auto 80px;
     }
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+
+    .about-hero-inner {
+      max-width: 900px;
+      margin: 0 24px;
     }
-    .footer-top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 25px;
+
+    .about-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 64px;
+      line-height: 1.3;
+      margin-bottom: 32px;
+      max-width: 1200px;
     }
-        .footer-logo img {
-      width: 50px;
-      height: 50px;
+
+    .about-avatar img {
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      object-fit: cover;
+      padding: 4px;
+      vertical-align: middle;
     }
-    .social-icons {
-      display: flex;
-      gap: 20px;
-    }
-    .social-icons a {
-      color: #990000;
-      text-decoration: none;
+
+    .about-subtext {
       font-size: 20px;
-      transition: color 0.3s ease;
+      line-height: 1.7;
+      max-width: 720px;
+      color: #444;
     }
-    .social-icons a:hover {
-      color: #c0392b;
-    }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      font-weight: 600;
-      color: #990000;
-    }
-    .footer-links a {
-      text-decoration: none;
-      color: #990000;
-      transition: color 0.3s ease;
-    }
-    .footer-links a:hover {
-      color: #c0392b;
-      text-decoration: underline;
-    }
+
+/* =========================
+   QUICK FACTS (ALI STYLE)
+========================= */
+
+.facts {
+  background: #fbf7f3;
+  padding: 40px 20px;
+  border-radius: 32px;
+  max-width: 1200px;
+  margin: 0 auto 0px;
+}
+
+.facts-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.facts h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #1f1f1f;
+}
+
+/* Columns */
+.facts-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* List */
+.facts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.facts-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+/* Check icon */
+.facts-list .check {
+  width: 28px;
+  height: 28px;
+  background: #1f1f1f;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Text */
+.facts-list p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+}
+
+.facts-list strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .facts {
+    padding: 60px 24px;
+  }
+
+  .facts h2 {
+    font-size: 36px;
+    margin-bottom: 36px;
+  }
+
+  .facts-columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .facts-list p {
+    font-size: 16px;
+  }
+    .about-avatar img {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+  }
+}
+
+/* =========================
+   MOBILE FIX – ABOUT PAGE
+========================= */
+@media (max-width: 768px) {
+
+  /* HERO SECTION */
+  .about-hero {
+    padding: 40px 16px 20px;
+    margin-bottom: 35px;
+  }
+
+  .about-hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  /* HERO TEXT */
+  .about-hero h1,
+  .about-hero h2 {
+    font-style: normal;
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  /* HERO IMAGE */
+  .about-hero img,
+  .about-hero .profile-image {
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* QUICK FACTS */
+  .facts {
+    padding: 40px 16px;
+  }
+
+  .facts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* STORY SECTION */
+  .story-section {
+    padding: 10px 0px;
+  }
+
+  .story-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    padding: 60px 16px;
+  }
+
+
+}
+
+/* Avatar wrapper */
+.about-avatar {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+
+/* Avatar image */
+.about-avatar img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== MOBILE TUNING ===== */
+@media (max-width: 768px) {
+  .about-title {
+    text-align: left;
+    line-height: 1.25;
+    margin-bottom: 0px;
+  }
+
+  .about-avatar img {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+  }
+}
+
+/* =========================
+   TIMELINE SECTION (ALI STYLE)
+========================= */
+
+.timeline {
+  padding: 50px 0px;
+  border-radius: 40px;
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+.timeline-title {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+/* wrapper */
+.timeline-wrapper {
+  position: relative;
+  max-width: 1300px;
+  margin: 0;
+}
+
+/* vertical line */
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 80px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #f2a365;
+  border-radius: 3px;
+}
+
+/* item layout */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 80px 350px 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* dot */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 72px;
+  top: 12px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 4px solid #f2a365;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* year (CENTER COLUMN) */
+.timeline-date {
+  grid-column: 2;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  text-align: left;
+}
+
+/* card */
+.timeline-card {
+  grid-column: 3;
+  background: #fbf7f3;
+  padding: 28px 28px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  max-width: 1300px;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+
+
+.timeline-card p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+}
+
+.timeline-card {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+
+  background: #fff7ef;
+  padding: 64px;
+  border-radius: 18px;
+}
+
+/* text side */
+.timeline-text {
+  flex: 2;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* image / visual side */
+.timeline-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .timeline-card {
+    flex-direction: column;
+    text-align: left;
+    padding: 28px;
+  }
+
+  .timeline-media {
+    width: 100%;
+  }
+
+  .timeline-media img {
+    max-width: 220px;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .timeline {
+    padding: 0px 0px;
+  }
+
+  .timeline-wrapper::before {
+    left: 12px;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 20px; /* more breathing room */
+  }
+
+  .timeline-item::before {
+    left: .1px;
+  }
+
+  .timeline-date {
+    font-size: 22px;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 15px;
+    border-radius: 16px;
+    line-height: 1.6;
+  }
+
+  .timeline-line {
+    left: 20px;        /* pull line closer to edge */
+    width: 21px;        /* thinner like Ali’s */
+  }
+
+  .timeline-card p {
+    font-size: 1rem;
+    max-width: 36ch; /* Ali-style readable line length */
+  }
+  
+}
+
+.footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; font-weight:600; color: rgb(118, 118, 118); margin-top: 14px; margin-bottom: 50px; }
+.footer-links a { color: rgb(118, 118, 118); text-decoration:none; transition: color .3s ease; }
+.footer-links a:hover { color:rgb(0, 109, 255); text-decoration:underline; }
   </style>
 </head>
+
 <body>
+
+  <!-- NAV -->
   <nav class="navbar">
-    <div class="brand" onclick="window.location.href='index.html'" style="cursor: pointer;">
+    <div class="brand" onclick="window.location.href='index.html'" role="link" aria-label="Homepage">
       <img src="assets/images/codychukwuebuka.jpg" alt="Cody Chukwuebuka" class="brand-logo" />
-      <div>
+      <div class="brand-text">
         <p class="name">Cody Chukwuebuka</p>
-        <p class="tagline">Tech / Educative Creator & Developer</p>
+        <p class="tagline">Tech Educator & Digital Creator</p>
       </div>
     </div>
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="#b30000" height="32" viewBox="0 0 24 24" width="32"><path d="M4 6h16M4 12h16M4 18h16" stroke="#b30000" stroke-width="2" stroke-linecap="round"/></svg>
+
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
-    <div class="mobile-menu">
+
+    <!-- backdrop -->
+    <div class="menu-backdrop"></div>
+
+    <div class="mobile-menu" aria-hidden="true">
       <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <!--<li><a href="tools.html">Tools</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="blog.html">Blog</a></li> -->
-        <li><a href="blog.html" class="cta">Blog</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html" >Shop</a></li>
       </ul>
     </div>
   </nav>
 
-  <main style="padding-top: 8rem; max-width: 900px; margin: 0 auto; text-align: center;">
-    <section>
-      <h4 style="letter-spacing: 3px; font-weight: 500;">ABOUT</h4>
-      <h1 style="font-size: 2.75rem; font-weight: 900;">A Little Bit About Me</h1>
-      <p style="max-width: 600px; margin: 1rem auto;">Aside from my tech & content creation journey, here are some fun and meaningful facts that tell you more about who I am.</p>
-    </section>
+  <main>
 
-    <section style="margin-top: 3rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem;">
-      <div style="flex: 1; min-width: 250px; max-width: 280px; text-align: right;">
-        <div style="margin-bottom: 2rem;">
-          <h3 style="font-weight: 700;">✨ Self-Taught Dev</h3>
-          <p style="font-weight: 500;">I taught myself how to code, design, and build using free online resources and consistent practice. No bootcamps, just grit.</p>
-        </div>
-        <div style="margin-bottom: 2rem;">
-          <h3 style="font-weight: 700;">📱 Content Nerd</h3>
-          <p style="font-weight: 500;">I enjoy filming relatable tech videos and iPhone skits to help beginners laugh and learn at the same time.</p>
-        </div>
-        <div style="margin-bottom: 2rem;">
-          <h3 style="font-weight: 700;">🚀 Dream Chaser</h3>
-          <p style="font-weight: 500;">I’m constantly working to level up, reach financial freedom, and inspire other young creators to do the same.</p>
-        </div>
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+      <div class="about-hero-inner">
+        <h1 class="about-title">
+          Hey, I’m
+          <span class="about-avatar">
+            <img src="assets/images/cody-chukwuebuka-profile.webp" alt="Cody Chukwuebuka">
+          </span>
+          Cody. <br>
+          I’m a Tech Educator, Content Creator, and Developer.
+        </h1>
+
+        <p class="about-subtext">
+          I create educational and relatable content around technology,
+          software development, and digital tools — helping beginners
+          simplify tech and build confidence.
+        </p>
       </div>
 
-      <div style="flex-shrink: 0;">
-        <img src="assets/images/bg.jpg" alt="Cody Chukwuebuka" style="width: 200px; height: auto; border-radius: 12px;" />
-      </div>
+          <!-- QUICK FACTS -->
+<section class="facts">
+  <div class="facts-inner">
+    <h2><span style=" font-weight: lighter;">Quick Facts</span> About Me</h2>
 
-      <div style="flex: 1; min-width: 250px; max-width: 280px; text-align: left;">
-        <div style="margin-bottom: 2rem;">
-          <h3 style="font-weight: 700;">🧠 Fast Learner</h3>
-          <p style="font-weight: 500;">Give me a new tool, framework, or challenge — I’ll dive in and figure it out before the day ends. That’s how I built my AR project.</p>
-        </div>
-        <div style="margin-bottom: 2rem;">
-          <h3 style="font-weight: 700;">🤝 Collaborator</h3>
-          <p style="font-weight: 500;">I thrive when working with passionate people, sharing ideas, and building useful tools and communities.</p>
-        </div>
-        <div style="margin-bottom: 2rem;">
-          <h3 style="font-weight: 700;">💡 Visionary</h3>
-          <p style="font-weight: 500;">I see every project as a stepping stone to something bigger. I believe in legacy through innovation and impact.</p>
-        </div>
-      </div>
-    </section>
+    <div class="facts-columns">
+      <!-- LEFT COLUMN -->
+      <ul class="facts-list">
+        <li>
+          <span class="check">✓</span>
+          <p>
+            <strong>I’ve been obsessed with technology since childhood. From 
+              experimenting with phones to learning how software works, curiosity 
+              has always driven me.</strong>
+          </p>
+        </li>
 
-    <section style="margin-top: 4rem;">
-      <h2 style="font-weight: 800;">Quick Facts About Me</h2>
-      <ul style="text-align: left; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 1rem auto;">
-        <li>✅ I’m 20 years old, born May 31, 2005 in Nigeria.</li>
-        <li>✅ I graduated recently with a B.S. in Computer Science.</li>
-        <li>✅ I launched my TikTok career in 2024.</li>
-        <li>✅ I love teaching others, building things, and collaborating.</li>
+        <li>
+          <span class="check">✓</span>
+          <p>
+            <strong>I started creating tech content on TikTok in 2024, after years of 
+              learning, watching creators, and figuring out how to explain technology 
+              simply.</strong>
+          </p>
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          <p>
+            <strong>I teach tech by breaking complex ideas into practical, real-life 
+              explanations — helping beginners feel confident using everyday technology.</strong>
+          </p>
+        </li>
       </ul>
+
+      <!-- RIGHT COLUMN -->
+      <ul class="facts-list">
+        <li>
+          <span class="check">✓</span>
+          <p>
+            <strong>I’ve grown a community of over 60,000 people across platforms, who I call friends, not followers.</strong>
+          </p>
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          <p>
+            <strong>I enjoy working with passionate creators and brands.</strong>
+          </p>
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          <p>
+            <strong> I’m currently focused on building educational tech content, creative projects, and long-term impact across Africa.</strong>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
     </section>
 
-    <section style="margin-top: 2rem;">
-      <p>If you're interested in working together, head over to the <a href="contact.html">Contact</a> page.</p>
-      <p>Also, take a look at the <a href="projects.html">Projects</a> I've worked on so far.</p>
-    </section>
+
+      <section class="story-section">
+        <div class="story-container">
+
+          <!-- TEXT -->
+          <div class="story-text">
+            <h2>Hey, I’m <span>Cody Chukwuebuka</span></h2>
+
+            <p>
+              I’ve loved technology for as long as I can remember.
+
+              What started as curiosity with phones and software quickly turned into a passion
+              for understanding how things work. Over the years, I taught myself tech, 
+              experimented endlessly, and eventually began sharing what I learned online.
+
+            <p>
+              In 2024, I fully stepped into tech content creation — breaking down complex ideas 
+              into simple, relatable explanations. Since then, tens of thousands of people have 
+              connected with my work, not as followers, but as a community.
+            </p>
+
+            <p>
+              Today, my goal is simple:
+              <strong>to teach technology in a way that empowers people in real life — one clear 
+                explanation at a time.</strong>
+            </p>
+
+            <p>
+              Today, I’m still learning, still building, and still teaching —
+              but now with purpose.
+            </p>
+
+          </div>
+
+          <!-- IMAGES -->
+        <div class="story-images">
+          <img src="assets/images/cody-chukwuebuka-headshot.webp" alt="Cody speaking" class="img-large">
+          <img src="assets/images/codychukwuebuka.jpg" alt="Cody working" class="img-small top">
+          <img src="assets/images/cody-chukwuebuka spotlight.webp" alt="Cody creating" class="img-small bottom">
+        </div>
+
+        </div>
+      </section>
+
+
+
+      <section class="timeline">
+  <h2 class="timeline-title"></h2>
+
+  <div class="timeline-wrapper">
+
+    <!-- Timeline item -->
+    <div class="timeline-item">
+      <div class="timeline-date">2005 – 2017</div>
+
+      <div class="timeline-card">
+        <div class="timeline-text">
+          <p>
+            I was born in Nigeria and grew up deeply curious about technology.
+            From as young as nine, I knew I wanted to be a science student — someone
+            who understood computers and how technology shapes the world.
+            That curiosity became real in 2017 when I got my first Android phone and 
+            began exploring smartphones, software, and how the internet works.
+          </p>
+        </div>
+
+      <div class="timeline-media">
+        <!-- optional: image / icon / illustration -->
+        <img src="assets/images/story-early.png" alt="Early tech curiosity">
+      </div>
+    </div>
+  </div>
+
+    <!-- Timeline item -->
+      <div class="timeline-item">
+        <div class="timeline-date">2017 – 2020</div>
+
+        <div class="timeline-card">
+          <div class="timeline-text">
+            <p>
+              With my first smartphone, I spent countless hours watching tech videos and 
+              learning about coding, software, and digital tools.
+              Every creator I watched felt like a future version of myself — someone I 
+              knew I could become someday.
+              Technology wasn’t just interesting anymore; it felt like purpose.
+            </p>
+          </div>
+
+          <div class="timeline-media">
+            <!-- optional: image / icon / illustration -->
+            <img src="assets/images/story-early.png" alt="Early tech curiosity">
+          </div>
+        </div>
+      </div>
+
+    <!-- Timeline item -->
+      <div class="timeline-item">
+        <div class="timeline-date">2020 – 2022</div>
+
+        <div class="timeline-card">
+          <div class="timeline-text">
+            <p>
+              After my WAEC exams and during the COVID era, TikTok started gaining popularity.
+              I joined the platform and followed trends like everyone else, but deep down I 
+              knew it wasn’t aligned with who I was.
+              I enjoyed technology — not trends — and I was still searching for my place.
+            </p>
+          </div>
+
+          <div class="timeline-media">
+            <!-- optional: image / icon / illustration -->
+            <img src="assets/images/story-early.png" alt="Early tech curiosity">
+          </div>
+        </div>
+      </div>
+
+        <!-- Timeline item -->
+      <div class="timeline-item">
+        <div class="timeline-date">2022 – 2024</div>
+
+        <div class="timeline-card">
+          <div class="timeline-text">
+            <p>
+              Everything changed when I discovered tech creators like Kagan on TikTok — people 
+              teaching technology while everyone else was focused on entertainment.
+              Seeing someone succeed by being different gave me clarity.
+              By 2024, while in university, I made a personal decision: I would return to TikTok 
+              and commit fully to the tech niche — no matter how long it took to figure out.
+            </p>
+          </div>
+
+          <div class="timeline-media">
+            <!-- optional: image / icon / illustration -->
+            <img src="assets/images/story-early.png" alt="Early tech curiosity">
+          </div>
+        </div>
+      </div>
+
+              <!-- Timeline item -->
+      <div class="timeline-item">
+        <div class="timeline-date">2024 – 2025</div>
+
+        <div class="timeline-card">
+          <div class="timeline-text">
+            <p>
+              In July 2024, I officially started my tech content journey.
+              The early videos were rough, but teaching tech felt natural.
+              I realized I was already helping people every day with their 
+              phones and apps — so I shared it publicly.
+              Once I found my voice, growth followed: 10K by December, 40K 
+              by January, and 60K by February. <br>
+
+              <br>
+              After my account was banned in early 2025, I restarted from scratch — this
+              time with experience and confidence.
+              I added creator growth tips to my content while balancing final-year 
+              university exams and projects.
+              By the end of the year, over 60,000 people connected with my content — 
+              and I chose to call them friends, not followers.
+              This led to the creation of my Telegram community, Friends of Cody.
+
+              <br> <br>
+
+
+              In 2025, I attended my first major creator event, The Dial Podcast, hosted 
+              by prominent Nigerian tech creators.
+              I met people I had long admired, conducted interviews, and experienced the 
+              creator ecosystem firsthand.
+              Through a strategic 20-day content challenge supported by my community, 
+              I won my first professional camera — the Sony ZV-E10 — proving that consistency, 
+              strategy, and community truly matter.
+            </p>
+          </div>
+
+          <div class="timeline-media">
+            <!-- optional: image / icon / illustration -->
+            <img src="assets/images/story-early.png" alt="Early tech curiosity">
+          </div>
+        </div>
+      </div>
+
+              <!-- Timeline item -->
+      <div class="timeline-item">
+        <div class="timeline-date">2026 – Present</div>
+
+        <div class="timeline-card">
+          <div class="timeline-text">
+            <p>
+              In 2026, I rebranded with a clearer mission: not just to share tech tips, 
+              but to teach how technology actually works in real life.
+              I launched a new series, “How It Works in 90 Seconds,” breaking down complex tech 
+              concepts into simple explanations.
+              I also expanded creatively through JustCody (behind-the-scenes & lifestyle) and 
+              2C Visuals (editing, photography, and videography).
+              Today, I’m still learning, building, and teaching — now with clarity and purpose.
+            </p>
+          </div>
+
+          <div class="timeline-media">
+            <!-- optional: image / icon / illustration -->
+            <img src="assets/images/story-early.png" alt="Early tech curiosity">
+          </div>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+
+
   </main>
 
-<footer>
-    <div class="footer-top">
-      <div class="footer-logo">
-        <img src="assets/images/Subject 4.png" alt="Profile Logo" />
-        <div class="branding" style="text-align:left;">
-          <h1 style="font-size:18px; margin:0; color:rgb(0, 109, 255);">Cody Chukwuebuka</h1>
-          <span style="font-size:12px; color:rgb(0, 109, 255);">Tech Creator & Developer</span>
-        </div>
-      </div>
+  <!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-top">
 
-      <div class="social-icons" aria-label="Social Media Links">
-        <a href="https://x.com/codychukwuebuka?s=21" aria-label="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.724-.951.564-2.005.974-3.127 1.195-.897-.959-2.178-1.559-3.594-1.559-2.723 0-4.928 2.206-4.928 4.928 0 .39.045.765.127 1.124-4.094-.205-7.725-2.165-10.159-5.144-.424.729-.666 1.574-.666 2.476 0 1.708.869 3.216 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.317 0-.626-.031-.927-.089.627 1.956 2.444 3.379 4.6 3.419-1.68 1.318-3.809 2.105-6.102 2.105-.396 0-.787-.023-1.174-.069 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14.002-7.496 14.002-13.986 0-.21 0-.423-.015-.633.962-.695 1.8-1.562 2.46-2.549z"/></svg>
-        </a>
+    <div class="footer-logo">
+      <img 
+        src="assets/images/cody-chukwuebuka-profile2.webp" 
+        alt="Cody Chukwuebuka logo"
+        loading="lazy"
+        width="50"
+        height="50"
+      />
+      <div class="branding" style="text-align:left;">
+        <h2 style="font-size:18px; margin:0; color:rgb(0, 109, 255);">
+          Cody Chukwuebuka
+        </h2>
+        <span style="font-size:12px; color:rgb(0, 109, 255);">
+          Tech Creator & Developer
+        </span>
+      </div>
+    </div>
+
+    <nav class="social-icons" aria-label="Cody Chukwuebuka social media profiles">
+      <a href="https://x.com/codychukwuebuka?s=21" aria-label="Cody Chukwuebuka on Twitter" title="Twitter" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.724-.951.564-2.005.974-3.127 1.195-.897-.959-2.178-1.559-3.594-1.559-2.723 0-4.928 2.206-4.928 4.928 0 .39.045.765.127 1.124-4.094-.205-7.725-2.165-10.159-5.144-.424.729-.666 1.574-.666 2.476 0 1.708.869 3.216 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.317 0-.626-.031-.927-.089.627 1.956 2.444 3.379 4.6 3.419-1.68 1.318-3.809 2.105-6.102 2.105-.396 0-.787-.023-1.174-.069 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14.002-7.496 14.002-13.986 0-.21 0-.423-.015-.633.962-.695 1.8-1.562 2.46-2.549z"/></svg>
+      </a>
         <a href="https://www.linkedin.com/in/cody-chukwuebuka-0034b82b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11.75 20h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.25 12.268h-3v-5.604c0-1.337-.026-3.06-1.865-3.06-1.867 0-2.153 1.459-2.153 2.965v5.699h-3v-11h2.882v1.5h.041c.402-.76 1.381-1.56 2.844-1.56 3.041 0 3.604 2.001 3.604 4.6v6.46z"/></svg>
         </a>
@@ -220,31 +888,25 @@
         <a href="https://www.tiktok.com/@codychukwuebuka?_r=1&_t=ZN-91W59ga1C90" aria-label="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" width="24" viewBox="0 0 448 512" aria-hidden="true"><path d="M448,209.9v95.5c-30.4,0-59.6-6.3-86.1-17.6v94.5c0,79.5-64.5,144-144,144S74,461.8,74,382.3c0-66.8,45.5-123.1,107-139.2v95.9c0,28.1,22.9,51,51,51s51-22.9,51-51V64h95.4c0,47.5,38.5,85.9,85.9,85.9Z"/></svg>
         </a>
-      </div>
-    </div>
-    <div class="footer-links" role="contentinfo">
-      <a href="javascript:void(0)">Cookie Policy</a>
-      <a href="javascript:void(0)">Disclaimer</a>
-      <a href="javascript:void(0)">Ethics Statement</a>
-      <a href="javascript:void(0)">Privacy Policy</a>
-      <a href="javascript:void(0)">Terms of Service</a>
-    </div>
-  </footer>
 
-  <script>
-    const toggleBtn = document.querySelector(".menu-toggle");
-    const mobileMenu = document.querySelector(".mobile-menu");
+      <!-- (All other social links unchanged, already correct) -->
 
-    toggleBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("active");
-    });
+    </nav>
+  </div>
 
-    // Close menu when clicking outside
-    document.addEventListener("click", function(event) {
-      if (!mobileMenu.contains(event.target) && !toggleBtn.contains(event.target)) {
-        mobileMenu.classList.remove("active");
-      }
-    });
-  </script>
+  <nav class="footer-links" aria-label="Legal and policy links">
+    <a href="/cookie-policy.html">Cookie Policy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/ethics-statement.html">Ethics Statement</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+  </nav>
+
+  <p class="footer-copy" style="margin-top:20px; font-size:13px; color:#777;">
+    © 2026 Cody Chukwuebuka. All rights reserved.
+  </p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
