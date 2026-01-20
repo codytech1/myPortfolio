@@ -1,0 +1,193 @@
+/* =========================
+   FOOTER CONNECT BUTTON
+========================= */
+.footer-connect {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 109, 255, 0.35);
+  color: rgb(0, 109, 255);
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.footer-connect:hover {
+  background: rgba(0, 109, 255, 0.08);
+  border-color: rgb(0, 109, 255);
+}
+
+/* =========================
+   CONNECT PAGE BASE
+========================= */
+.connect-page {
+  background: #0b0e14;
+  color: #f9fafb;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* =========================
+   CONNECT WRAPPER
+========================= */
+.connect-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* =========================
+   PROFILE (CENTERED)
+========================= */
+.connect-profile {
+  text-align: center; /* ✅ centers image + text */
+}
+
+.connect-profile img {
+  display: block;        /* ✅ ensures proper centering */
+  margin: 0 auto 14px;   /* ✅ centers horizontally */
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.connect-profile h1 {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.connect-profile p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* =========================
+   LINKS
+========================= */
+.connect-links {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.connect-link {
+  display: block;
+  text-align: center;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.connect-link:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
+}
+
+.connect-link.primary {
+  background: #3b82f6;
+  border-color: transparent;
+}
+
+.connect-link.subtle {
+  opacity: 0.8;
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+.connect-socials {
+  margin-top: 26px;
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* =========================
+   ENTRANCE ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.connect-profile {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.connect-links .connect-link {
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.connect-links .connect-link:nth-child(1) { animation-delay: 0.1s; }
+.connect-links .connect-link:nth-child(2) { animation-delay: 0.2s; }
+.connect-links .connect-link:nth-child(3) { animation-delay: 0.3s; }
+.connect-links .connect-link:nth-child(4) { animation-delay: 0.4s; }
+
+
+/* Footer wrapper */
+/* Footer wrapper */
+.connect-footer {
+  margin-top: 40px;
+  padding: 30px 0 20px;
+  text-align: center;
+}
+
+/* Social icons container */
+.connect-socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* CRITICAL FIX */
+.connect-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 👇 THIS FIXES INSTAGRAM */
+  color: #ffffff !important;
+
+  transition: all 0.25s ease;
+}
+
+/* SVG behavior */
+.connect-socials svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* Hover */
+.connect-socials a:hover {
+  background: rgba(255,255,255,0.16);
+  transform: translateY(-2px);
+}
+
+/* Copyright */
+.connect-copy {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.55);
+}
