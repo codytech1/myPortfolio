@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
   <url>
     <loc>https://codychukwuebuka.com/</loc>
+    <lastmod>2026-01-14</lastmod>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://codychukwuebuka.com/assets/images/cody-chukwuebuka tech-creator.webp</image:loc>
+      <image:title>Cody Chukwuebuka — Tech Creator and Developer</image:title>
+    </image:image>
   </url>
+
+  <!-- About Page -->
   <url>
     <loc>https://codychukwuebuka.com/about.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <priority>0.9</priority>
   </url>
+
+  <!-- Portfolio Page -->
   <url>
-    <loc>https://codychukwuebuka.com/contact.html</loc>
+    <loc>https://codychukwuebuka.com/portfolio.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <priority>0.9</priority>
   </url>
+
+  <!-- Gallery Page -->
   <url>
-    <loc>https://codychukwuebuka.com/projects.html</loc>
+    <loc>https://codychukwuebuka.com/gallery.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://codychukwuebuka.com/tools.html</loc>
-  </url>
-  <url>
-    <loc>https://codychukwuebuka.com/events.html</loc>
-  </url>
-  <url>
-    <loc>https://codychukwuebuka.com/consulting.html</loc>
-  </url>
+
 </urlset>
