@@ -3,35 +3,30 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage -->
   <url>
-    <loc>https://codychukwuebuka.com/</loc>
+    <loc>https://www.codychukwuebuka.com/</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>weekly</changefreq>
-
     <image:image>
-      <image:loc>https://codychukwuebuka.com/assets/images/cody-chukwuebuka%20tech-creator.webp</image:loc>
+      <image:loc>https://www.codychukwuebuka.com/assets/images/cody-chukwuebuka-tech-creator.webp</image:loc>
       <image:title>Cody Chukwuebuka — Tech Creator and Developer</image:title>
     </image:image>
   </url>
 
-  <!-- About Page -->
   <url>
-    <loc>https://codychukwuebuka.com/about.html</loc>
+    <loc>https://www.codychukwuebuka.com/about.html</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Portfolio Page -->
   <url>
-    <loc>https://codychukwuebuka.com/portfolio.html</loc>
+    <loc>https://www.codychukwuebuka.com/portfolio.html</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Gallery Page -->
   <url>
-    <loc>https://codychukwuebuka.com/gallery.html</loc>
+    <loc>https://www.codychukwuebuka.com/gallery.html</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>monthly</changefreq>
   </url>
