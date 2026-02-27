@@ -100,3 +100,13 @@ document.addEventListener("click", (e) => {
     link.classList.add("active");
   }
 });
+
+  const workBtn = document.querySelector('.work-btn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 250) {
+      workBtn.classList.add('floating');
+    } else {
+      workBtn.classList.remove('floating');
+    }
+  });
