@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cody Chukwuebuka | Media Kit</title>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: #f5f5f5;
+  color: #222;
+}
+
+.download-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #222;
+  color: #fff;
+  padding: 14px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #000;
+  transform: translateY(-3px);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 400;
+  color: #666;
+}
+
+.divider {
+  height: 1px;
+  background: #ccc;
+  margin: 40px 0;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-text p {
+  color: #555;
+  line-height: 1.6;
+  font-size: large;
+}
+
+/* SOCIAL SECTION */
+.social-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1 1 200px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-item h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.social-item p {
+  margin: 2px 0 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.social-item .numbers {
+font-weight: bolder;
+font-size: 15px;
+}
+
+/* SPLIT SECTION */
+.split {
+  display: flex;
+  gap: 40px;
+}
+
+.split-box {
+  flex: 1;
+}
+
+.split-box h3 {
+  background: #333;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.split-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.split-box li {
+  margin: 10px 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* BRANDS */
+.brands {
+  background: #333;
+  color: white;
+  padding: 30px 20px;
+}
+
+.brands a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brands .trust {
+  font-size: 8px;
+  font-style: italic;
+}
+
+.brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+/* CONTACT */
+.contact {
+  margin-top: 30px;
+}
+
+.contact p {
+  margin: 6px 0;
+  color: #444;
+}
+
+.media-footer {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.media-footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 🔥 MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  @media (max-width: 768px) {
+  .download-btn {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+}
+
+/* SOCIAL SECTION DEFAULT (Desktop) */
+.social-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* 🔥 MOBILE SCROLL VERSION */
+@media (max-width: 768px) {
+
+  .social-section {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .social-item .numbers {
+    font-weight: bolder;
+}
+
+  .social-item {
+    min-width: 220px;
+    flex: 0 0 auto;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 12px;
+    scroll-snap-align: start;
+  }
+
+  /* Hide ugly scrollbar (optional) */
+  .social-section::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .social-section::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+}
+
+  .split {
+    flex-direction: column;
+  }
+
+  .brand-logos {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+    <a href="assets/media-kit/cody-chukwuebuka-media-kit-2026.pdf" 
+    class="download-btn" 
+    download>
+    Download Media Kit
+</a>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="assets/images/Cody media-kit.webp" alt="Cody Chukwuebuka">
+
+    <div class="hero-text">
+      <h1>CODY CHUKWUEBUKA</h1>
+      <h2>Tech Educator & Digital Creator</h2>
+      <p>
+        Cody Chukwuebuka is a technology educator and digital creator focused 
+        on simplifying complex software tools, platform mechanics, and monetization frameworks. <br>  <br>
+        Through structured, high-retention content, I helps students, young professionals, and digital-first 
+        individuals understand and leverage technology practically — not just conceptually. <br>
+        My content bridges the gap between curiosity and implementation.
+      </p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- METRICS -->
+  <div class="social-section">
+
+    <a href="https://www.tiktok.com/@codychukwuebuka" target="_blank" class="social-item">
+      <img src="assets/icons/tiktok.svg" alt="TikTok">
+      <div>
+        <h4>TikTok</h4>
+        <p>65K+ Followers</p>
+        <p class="numbers">800,000+ Monthly Views</p>
+      </div>
+    </a>
+  
+    <a href="https://www.youtube.com/@codychukwuebuka" target="_blank" class="social-item">
+      <img src="assets/icons/youtube.svg" alt="YouTube">
+      <div>
+        <h4>YouTube</h4>
+        <p>1K+ Subscribers</p>
+        <p class="numbers">10,000+ Monthly Views</p>
+      </div>
+    </a>
+  
+    <a href="https://www.instagram.com/codychukwuebuka" target="_blank" class="social-item">
+      <img src="assets/icons/instagram.svg" alt="Instagram">
+      <div>
+        <h4>Instagram</h4>
+        <p>1K+ Followers</p>
+        <p class="numbers">5,000+ Monthly Views</p>
+      </div>
+    </a>
+  
+    <a href="https://www.facebook.com/codychukwuebuka1" target="_blank" class="social-item">
+      <img src="assets/icons/facebook.svg" alt="Facebook">
+      <div>
+        <h4>Facebook</h4>
+        <p>1.6K+ Followers</p>
+        <p class="numbers">5,000+ Monthly Views</p>
+      </div>
+    </a>
+  
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SERVICES + DEMOGRAPHICS -->
+  <div class="split">
+
+    <div class="split-box">
+      <h3>PARTNERSHIP OPPORTUNITIES</h3>
+      <ul>
+        <li>• Educational Brand Integrations</li>
+        <li>• In-Depth Product Walkthroughs</li>
+        <li>• Digital Tool Demonstrations</li>
+        <li>• Platform Feature Campaigns</li>
+        <li>• Long-Term Partnerships</li>
+      </ul>
+    </div>
+
+
+    <div class="split-box">
+        <h3>AUDIENCE DEMOGRAPHICS</h3>
+        <ul>
+          <li><strong>Age Range:</strong> 	
+            •	31% (18–24 years), •	45% (25–34 years) - Majority</li>
+          <li><strong>Top Locations:</strong> Nigeria, US, UK</li>
+          <li><strong>Audience Type:</strong> Students, Young Professionals, Digital Creators, Tech-Curious Everyday Users</li>
+          <li><strong>Interest:</strong> Technology, Software, Monetization Tools, Productivity Systems</li>
+        </ul>
+      </div>
+
+    <!-- RATE CARD -->
+    <div class="split-box">
+        <h3>RATE CARD</h3>
+        <ul>
+          <li><strong>TikTok Brand Integration:</strong> — $100+</li>
+          <li><strong>TikTok Dedicated Review Video:</strong> $200+</li>
+          <li><strong>YouTube Integration:</strong> $150+</li>
+          <li><strong>YouTube Dedicated Review Video:</strong> $350+</li>
+          <li><strong>UGC Content Package:</strong> $500+</li>
+          <li><strong>Long-Term Partnership:</strong> Custom Quote</li>
+        </ul>
+        <p style="font-size:13px; color:#777;">
+            Final pricing varies based on deliverables, exclusivity, usage rights, and campaign scope.
+        </p>
+      </div>
+      
+
+  </div>
+
+ <!-- <div class="split-box">
+    <h3>PERFORMANCE SNAPSHOT</h3>
+    <p>Cody’s educational content generates over 1M+ monthly views across TikTok, YouTube, 
+        Instagram, and Facebook, delivering structured, high-retention technology content to a digital-first audience.</p>
+    <ul>
+      <li>• 800,000+ Monthly TikTok Views</li>
+      <li>• 10,000+ Monthly YouTube Views</li>
+      <li>• 5,000+ Monthly Instagram Views</li>
+      <li>• 5,000+ Monthly Facebook Views</li>
+      <li>• Multi-Platform Digital Distribution</li>
+    </ul>
+  </div> -->
+  
+
+    
+
+
+  <div class="divider"></div>
+
+  <!-- CONTENT PREVIEW 
+  <div class="preview">
+    <img src="assets/images/sample1.jpg">
+    <img src="assets/images/sample2.jpg">
+    <img src="assets/images/sample3.jpg">
+  </div>  
+
+  <div class="divider"></div>-->
+
+  <!-- BRANDS -->
+  <div class="brands">
+    <h3>BRANDS I'VE WORKED WITH</h3>
+    <p class="trust">Trusted by Digital & Technology Brands</p>
+    <div class="brand-logos">
+      <p> <a href="https://www.temu.com/ul/kuiper/un2.html?_p_rfs=1&_p_rfs=1&subj=un-search-web&_p_jump_id=960&_x_vst_scene=adg&
+      locale_override=147~en~NGN&search_key=Temu&_x_ads_channel=google&_x_ads_sub_channel=search&adg_ctx=m-7b0028eb&_x_ads_account=
+      6693337227&_x_ads_set=21893968001&_x_ads_id=169446416879&_x_ads_creative_id=720650186340&_x_ns_source=g&_x_ns_gclid=CjwKCAiAnoX
+      NBhAZEiwAnItcG7I08t258e57WcLzTwlXc5fFlgQeCYPCf0rojQHIYZWOSxrvZgFBFRoCaucQAvD_BwE&_x_ns_placement=&_x_ns_match_type=e&_x_ns_ad_positi
+      on=&_x_ns_product_id=&_x_ns_target=&_x_ns_devicemodel=&_x_ns_wbraid=CkEKCQiA-__MBhDlARIwAFSfQLe769TZxGwXn_hzFmr1IPjCF0O_67JczKqmEFfqJfJmmeSs-
+      c6YWju6j_NyGgK1wA&_x_ns_gbraid=0AAAAAo4mICEH10y8MRp9UytX_olrZ_hfV&_x_ns_keyword=temu&_x_ns_targetid=kwd-4583699489&_x_ns_extensionid=&gad_source=1&gad_
+      campaignid=21893968001&gbraid=0AAAAAo4mICEH10y8MRp9UytX_olrZ_hfV&gclid=CjwKCAiAnoXNBhAZEiwAnItcG7I08t258e57WcLzTwlXc5fFlgQeCYPCf0rojQHIYZWOSxrvZgFBFRoCaucQAvD_BwE"  target="_blank">Temu </a></p> 
+      <p> <a href="https://reccloud.com/?UTM_source=impact&Partner=TakeAds%20Networks&Partner_ID=123201&irgwc=1
+      &afsrc=1&clickid=RPk3GGxkkxyZWcMV1RxEk3nnUku2C%3AzRJy2bVw0" target="_blank">Recloud AI </a></p>
+      <p> <a href="https://picwish.com/create?apptype=ads-gg-brand&gad_source=1&gad_
+      campaignid=22857058958&gbraid=0AAAAACjUYSbA_3aTDSCg1vsrEYf_7NCgQ&gclid=CjwK
+      CAiAnoXNBhAZEiwAnItcGwwvj9dONCEt7JgwbOgFjMjjsj2uV23Yni_O9urSdhAWarMs3p1yfhoC978QAvD_BwE"  target="_blank">Picwwish AI </a></p>
+      <p href="">Uglycash Finance</p>
+      <p> <a href="https://gitmind.com/app/recents?UTM_source=impact&Partner=TakeAds%20Networks&Partner_ID=123201&
+      irgwc=1&afsrc=1&clickid=RPk3GGxkkxyZWcMV1RxEk3nnUku2sSXpJyxwWg0" target="_blank">GitMind </a></p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact">
+    <h3>Contact</h3>
+    <h4>Let’s Build Impactful Campaigns</h4>
+    <p>For collaborations, partnerships, and campaign discussions:</p>
+    <p>Email: business@codychukwuebuka.com</p>
+    <p>Website: www.codychukwuebuka.com</p>
+  </div>
+
+</div>
+
+<div class="media-footer">
+    <p>© 2026 Cody Chukwuebuka</p>
+    <p>
+      <a href="mailto:chiboyvicofficial@gmail.com">
+        business@codychukwuebuka.com
+      </a>
+    </p>
+    <p>
+        Available for partnerships & long-term collaborations.
+    </p>
+    <p>
+        All metrics updated quarterly
+      </p>
+  </div>
+
+</body>
+</html>
