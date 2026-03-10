@@ -146,10 +146,14 @@ font-size: 15px;
 }
 
 /* BRANDS */
+
+
 .brands {
-  background: #333;
+  background: #838282;
   color: white;
-  padding: 30px 20px;
+  padding: 10px 20px 30px 20px;
+  margin-top: 20px;
+  border-radius: 40px;
 }
 
 .brands a {
@@ -157,18 +161,78 @@ font-size: 15px;
   color: inherit;
 }
 
+.brand-logos{
+  display:flex;
+  gap:40px;
+  overflow-x:auto;
+  padding-top:auto;
+  scroll-behavior:smooth;
+  flex-wrap:nowrap;
+  align-items:center;
+  -webkit-overflow-scrolling: touch;
+}
+
+.brand-logos::-webkit-scrollbar{
+  height:6px;
+}
+
+.brand-logos::-webkit-scrollbar-thumb{
+  background:#777;
+  border-radius:10px;
+}
+
+.brand-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-decoration:none;
+  color:white;
+  min-width:120px;
+}
+
+.brand-item img{
+  width:60px;
+  height:60px;
+  border-radius: 50px;
+  object-fit:contain;
+  margin-bottom:8px;
+}
+
+.brand-item span{
+  font-size:14px;
+  text-align:center;
+}
+
+
+
+@media (max-width:768px){
+
+  .brand-logos{
+    gap:25px;
+  }
+
+  .brand-item{
+    min-width:90px;
+  }
+
+  .brand-item img{
+    width:45px;
+    height:45px;
+  }
+
+  .brand-item span{
+    font-size:12px;
+  }
+
+}
+
 .brands .trust {
   font-size: 8px;
   font-style: italic;
 }
 
-.brand-logos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  text-align: center;
-}
+
+
 
 /* CONTACT */
 .contact {
@@ -276,11 +340,6 @@ font-size: 15px;
     flex-direction: column;
   }
 
-  .brand-logos {
-    flex-direction: column;
-    gap: 15px;
-  }
-
 }
 </style>
 </head>
@@ -313,6 +372,7 @@ font-size: 15px;
   </div>
 
   <div class="divider"></div>
+  
 
   <!-- METRICS -->
   <div class="social-section">
@@ -355,6 +415,40 @@ font-size: 15px;
   
   </div>
 
+    <!-- BRANDS -->
+  <div class="brands">
+    <h3>BRANDS I'VE WORKED WITH</h3>
+
+    <div class="brand-logos">
+
+      <a href="https://www.temu.com" target="_blank" class="brand-item">
+        <img src="assets/icons/Temu-logo.webp" alt="Temu">
+        <span>Temu</span>
+      </a>
+
+      <a href="https://reccloud.com" target="_blank" class="brand-item">
+        <img src="assets/icons/recloud.png" alt="Recloud AI">
+        <span>Recloud AI</span>
+      </a>
+
+      <a href="https://picwish.com" target="_blank" class="brand-item">
+        <img src="assets/icons/picwish.png" alt="Picwish AI">
+        <span>Picwish AI</span>
+      </a>
+
+      <a href="#" class="brand-item">
+        <img src="assets/icons/uglycash.webp" alt="Uglycash Finance">
+        <span>Uglycash Finance</span>
+      </a>
+
+      <a href="https://gitmind.com" target="_blank" class="brand-item">
+        <img src="assets/icons/gitmind.jpg" alt="GitMind">
+        <span>GitMind</span>
+      </a>
+
+    </div>
+  </div>
+
   <div class="divider"></div>
 
   <!-- SERVICES + DEMOGRAPHICS -->
@@ -377,13 +471,13 @@ font-size: 15px;
         <ul>
           <li><strong>Age Range:</strong> 	
             •	31% (18–24 years), •	45% (25–34 years) - Majority</li>
-          <li><strong>Top Locations:</strong> Nigeria, US, UK</li>
+          <li><strong>Top Locations:</strong> Nigeria🇳🇬(50%), Ghana🇬🇭(11%), SA🇿🇦(6%) US🇺🇸(5%)</li>
           <li><strong>Audience Type:</strong> Students, Young Professionals, Digital Creators, Tech-Curious Everyday Users</li>
           <li><strong>Interest:</strong> Technology, Software, Monetization Tools, Productivity Systems</li>
         </ul>
       </div>
 
-    <!-- RATE CARD -->
+    <!-- RATE CARD 
     <div class="split-box">
         <h3>RATE CARD</h3>
         <ul>
@@ -397,7 +491,7 @@ font-size: 15px;
         <p style="font-size:13px; color:#777;">
             Final pricing varies based on deliverables, exclusivity, usage rights, and campaign scope.
         </p>
-      </div>
+      </div>. -->
       
 
   </div>
@@ -430,28 +524,6 @@ font-size: 15px;
 
   <div class="divider"></div>-->
 
-  <!-- BRANDS -->
-  <div class="brands">
-    <h3>BRANDS I'VE WORKED WITH</h3>
-    <p class="trust">Trusted by Digital & Technology Brands</p>
-    <div class="brand-logos">
-      <p> <a href="https://www.temu.com/ul/kuiper/un2.html?_p_rfs=1&_p_rfs=1&subj=un-search-web&_p_jump_id=960&_x_vst_scene=adg&
-      locale_override=147~en~NGN&search_key=Temu&_x_ads_channel=google&_x_ads_sub_channel=search&adg_ctx=m-7b0028eb&_x_ads_account=
-      6693337227&_x_ads_set=21893968001&_x_ads_id=169446416879&_x_ads_creative_id=720650186340&_x_ns_source=g&_x_ns_gclid=CjwKCAiAnoX
-      NBhAZEiwAnItcG7I08t258e57WcLzTwlXc5fFlgQeCYPCf0rojQHIYZWOSxrvZgFBFRoCaucQAvD_BwE&_x_ns_placement=&_x_ns_match_type=e&_x_ns_ad_positi
-      on=&_x_ns_product_id=&_x_ns_target=&_x_ns_devicemodel=&_x_ns_wbraid=CkEKCQiA-__MBhDlARIwAFSfQLe769TZxGwXn_hzFmr1IPjCF0O_67JczKqmEFfqJfJmmeSs-
-      c6YWju6j_NyGgK1wA&_x_ns_gbraid=0AAAAAo4mICEH10y8MRp9UytX_olrZ_hfV&_x_ns_keyword=temu&_x_ns_targetid=kwd-4583699489&_x_ns_extensionid=&gad_source=1&gad_
-      campaignid=21893968001&gbraid=0AAAAAo4mICEH10y8MRp9UytX_olrZ_hfV&gclid=CjwKCAiAnoXNBhAZEiwAnItcG7I08t258e57WcLzTwlXc5fFlgQeCYPCf0rojQHIYZWOSxrvZgFBFRoCaucQAvD_BwE"  target="_blank">Temu </a></p> 
-      <p> <a href="https://reccloud.com/?UTM_source=impact&Partner=TakeAds%20Networks&Partner_ID=123201&irgwc=1
-      &afsrc=1&clickid=RPk3GGxkkxyZWcMV1RxEk3nnUku2C%3AzRJy2bVw0" target="_blank">Recloud AI </a></p>
-      <p> <a href="https://picwish.com/create?apptype=ads-gg-brand&gad_source=1&gad_
-      campaignid=22857058958&gbraid=0AAAAACjUYSbA_3aTDSCg1vsrEYf_7NCgQ&gclid=CjwK
-      CAiAnoXNBhAZEiwAnItcGwwvj9dONCEt7JgwbOgFjMjjsj2uV23Yni_O9urSdhAWarMs3p1yfhoC978QAvD_BwE"  target="_blank">Picwwish AI </a></p>
-      <p href="">Uglycash Finance</p>
-      <p> <a href="https://gitmind.com/app/recents?UTM_source=impact&Partner=TakeAds%20Networks&Partner_ID=123201&
-      irgwc=1&afsrc=1&clickid=RPk3GGxkkxyZWcMV1RxEk3nnUku2sSXpJyxwWg0" target="_blank">GitMind </a></p>
-    </div>
-  </div>
 
   <!-- CONTACT -->
   <div class="contact">
